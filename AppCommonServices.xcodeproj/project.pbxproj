@@ -24,6 +24,7 @@
 		468B47A72A98F2DC00169BE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		468B47AA2A98F2DC00169BE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		468B47AC2A98F2DC00169BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		468B47B22A98F2E700169BE7 /* AppCommonServices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCommonServices.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		468B479D2A98F2DB00169BE7 /* AppCommonServices */ = {
 			isa = PBXGroup;
 			children = (
+				468B47B22A98F2E700169BE7 /* AppCommonServices.entitlements */,
 				468B479E2A98F2DB00169BE7 /* AppDelegate.swift */,
 				468B47A02A98F2DB00169BE7 /* SceneDelegate.swift */,
 				468B47A22A98F2DB00169BE7 /* ViewController.swift */,
@@ -285,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppCommonServices/AppCommonServices.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HLB4K7V9AN;
@@ -313,6 +316,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppCommonServices/AppCommonServices.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HLB4K7V9AN;
