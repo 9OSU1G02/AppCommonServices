@@ -13,6 +13,9 @@
 		468B47A62A98F2DB00169BE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468B47A42A98F2DB00169BE7 /* Main.storyboard */; };
 		468B47A82A98F2DC00169BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 468B47A72A98F2DC00169BE7 /* Assets.xcassets */; };
 		468B47AB2A98F2DC00169BE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468B47A92A98F2DC00169BE7 /* LaunchScreen.storyboard */; };
+		46B67F1C2A9A29E2006607A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46B67F1B2A9A29E2006607A3 /* GoogleService-Info.plist */; };
+		46B67F222A9A2BDA006607A3 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 46B67F212A9A2BDA006607A3 /* FirebaseMessaging */; };
+		46B67F242A9A3AF8006607A3 /* BeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B67F232A9A3AF8006607A3 /* BeachViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,8 @@
 		468B47AA2A98F2DC00169BE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		468B47AC2A98F2DC00169BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		468B47B22A98F2E700169BE7 /* AppCommonServices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCommonServices.entitlements; sourceTree = "<group>"; };
+		46B67F1B2A9A29E2006607A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		46B67F232A9A3AF8006607A3 /* BeachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeachViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B67F222A9A2BDA006607A3 /* FirebaseMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,10 +67,12 @@
 				468B479E2A98F2DB00169BE7 /* AppDelegate.swift */,
 				468B47A02A98F2DB00169BE7 /* SceneDelegate.swift */,
 				468B47A22A98F2DB00169BE7 /* ViewController.swift */,
+				46B67F232A9A3AF8006607A3 /* BeachViewController.swift */,
 				468B47A42A98F2DB00169BE7 /* Main.storyboard */,
 				468B47A72A98F2DC00169BE7 /* Assets.xcassets */,
 				468B47A92A98F2DC00169BE7 /* LaunchScreen.storyboard */,
 				468B47AC2A98F2DC00169BE7 /* Info.plist */,
+				46B67F1B2A9A29E2006607A3 /* GoogleService-Info.plist */,
 			);
 			path = AppCommonServices;
 			sourceTree = "<group>";
@@ -85,6 +93,9 @@
 			dependencies = (
 			);
 			name = AppCommonServices;
+			packageProductDependencies = (
+				46B67F212A9A2BDA006607A3 /* FirebaseMessaging */,
+			);
 			productName = AppCommonServices;
 			productReference = 468B479B2A98F2DB00169BE7 /* AppCommonServices.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 468B47922A98F2DB00169BE7;
+			packageReferences = (
+				46B67F202A9A2BDA006607A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 468B479C2A98F2DB00169BE7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				468B47AB2A98F2DC00169BE7 /* LaunchScreen.storyboard in Resources */,
+				46B67F1C2A9A29E2006607A3 /* GoogleService-Info.plist in Resources */,
 				468B47A82A98F2DC00169BE7 /* Assets.xcassets in Resources */,
 				468B47A62A98F2DB00169BE7 /* Main.storyboard in Resources */,
 			);
@@ -142,6 +157,7 @@
 			files = (
 				468B47A32A98F2DB00169BE7 /* ViewController.swift in Sources */,
 				468B479F2A98F2DB00169BE7 /* AppDelegate.swift in Sources */,
+				46B67F242A9A3AF8006607A3 /* BeachViewController.swift in Sources */,
 				468B47A12A98F2DB00169BE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46B67F202A9A2BDA006607A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46B67F212A9A2BDA006607A3 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46B67F202A9A2BDA006607A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 468B47932A98F2DB00169BE7 /* Project object */;
 }
