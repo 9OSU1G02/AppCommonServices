@@ -11,24 +11,20 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    private let categoryIdentifier = "AcceptOrReject"
+    private let categoryIdentifier = "ShowMap"
     private enum ActionIdentifier: String {
-        case accept, reject
+        case comment
         var title: String {
             switch self {
-            case .accept:
+            case .comment:
                 return "Accept"
-            case .reject:
-                return "Reject"
             }
         }
-        
+
         var icon: UNNotificationActionIcon {
             switch self {
-            case .accept:
-                return .init(systemImageName: "checkmark")
-            case .reject:
-                return .init(systemImageName: "xmark")
+            case .comment:
+                return .init(systemImageName: "bubble")
             }
         }
     }
@@ -83,9 +79,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func registerCustomActions() {
-        let accept = UNNotificationAction(identifier: ActionIdentifier.accept.rawValue, title: ActionIdentifier.accept.title, options: .foreground, icon: ActionIdentifier.accept.icon)
-        let reject = UNNotificationAction(identifier: ActionIdentifier.reject.rawValue, title: ActionIdentifier.reject.title, options: .foreground, icon: ActionIdentifier.reject.icon)
-        let category = UNNotificationCategory(identifier: categoryIdentifier, actions: [accept, reject], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: "AcceptOrReject", categorySummaryFormat: "AOR", options: [.hiddenPreviewsShowTitle])
+        let comment = UNTextInputNotificationAction(identifier: ActionIdentifier.comment.rawValue, title: ActionIdentifier.comment.title, options: .authenticationRequired, icon: ActionIdentifier.comment.icon)
+        let category = UNNotificationCategory(identifier: categoryIdentifier, actions: [comment], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: "Comment", categorySummaryFormat: "AOR", options: [.hiddenPreviewsShowTitle])
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
 }
@@ -102,10 +97,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             return
         }
         switch action {
-        case .accept:
+        case .comment:
             Notification.Name.acceptButton.post()
-        case .reject:
-            Notification.Name.rejectButton.post()
         }
     }
 
@@ -116,6 +109,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
         print("url", url)
     }
+    
 }
 
 extension AppDelegate: MessagingDelegate {

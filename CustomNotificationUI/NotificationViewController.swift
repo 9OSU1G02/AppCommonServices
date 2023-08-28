@@ -34,5 +34,10 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 
         mapView.setRegion(region, animated: false)
     }
- 
+
+    func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
+        defer { completion(.dismiss) }
+        guard let response = response as? UNTextInputNotificationResponse else { return }
+        let text = response.userText
+    }
 }
