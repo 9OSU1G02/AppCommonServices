@@ -32,4 +32,8 @@ class ViewController: UIViewController {
             self?.numRejected += 1
         }
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 }
