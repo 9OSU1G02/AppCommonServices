@@ -13,6 +13,7 @@
 		468B47A62A98F2DB00169BE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468B47A42A98F2DB00169BE7 /* Main.storyboard */; };
 		468B47A82A98F2DC00169BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 468B47A72A98F2DC00169BE7 /* Assets.xcassets */; };
 		468B47AB2A98F2DC00169BE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468B47A92A98F2DC00169BE7 /* LaunchScreen.storyboard */; };
+		46A8B6232A9E2D9E002A6C62 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A8B6222A9E2D9E002A6C62 /* PaymentView.swift */; };
 		46B67F1C2A9A29E2006607A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46B67F1B2A9A29E2006607A3 /* GoogleService-Info.plist */; };
 		46B67F222A9A2BDA006607A3 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 46B67F212A9A2BDA006607A3 /* FirebaseMessaging */; };
 		46B67F242A9A3AF8006607A3 /* BeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B67F232A9A3AF8006607A3 /* BeachViewController.swift */; };
@@ -70,6 +71,7 @@
 		468B47AA2A98F2DC00169BE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		468B47AC2A98F2DC00169BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		468B47B22A98F2E700169BE7 /* AppCommonServices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCommonServices.entitlements; sourceTree = "<group>"; };
+		46A8B6222A9E2D9E002A6C62 /* PaymentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		46B67F1B2A9A29E2006607A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46B67F232A9A3AF8006607A3 /* BeachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeachViewController.swift; sourceTree = "<group>"; };
 		46B67F252A9A63BF006607A3 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		46CB79622A9CF0BE004E620D /* CustomNotificationUI */ = {
 			isa = PBXGroup;
 			children = (
+				46A8B6222A9E2D9E002A6C62 /* PaymentView.swift */,
 				46CB79632A9CF0BE004E620D /* NotificationViewController.swift */,
 				46CB79652A9CF0BE004E620D /* MainInterface.storyboard */,
 				46CB79682A9CF0BE004E620D /* Info.plist */,
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46CB79642A9CF0BE004E620D /* NotificationViewController.swift in Sources */,
+				46A8B6232A9E2D9E002A6C62 /* PaymentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

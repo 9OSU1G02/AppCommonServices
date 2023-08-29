@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,19 +20,30 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="262"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rKo-6l-uh4">
+                                <rect key="frame" x="232" y="8" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="7jk-iZ-ffe"/>
+                                    <constraint firstAttribute="height" constant="80" id="pJq-28-69w"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6ya-t2-Lyt"/>
                         <color key="backgroundColor" red="0.45882353186607361" green="0.74901962280273438" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ZlN-wM-dLF" secondAttribute="bottom" id="BJA-lp-vmR"/>
                             <constraint firstItem="ZlN-wM-dLF" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="D17-D9-ssW"/>
                             <constraint firstItem="ZlN-wM-dLF" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="H2C-GD-DFe"/>
+                            <constraint firstItem="rKo-6l-uh4" firstAttribute="trailing" secondItem="6ya-t2-Lyt" secondAttribute="trailing" constant="-8" id="Rja-BF-k4n"/>
                             <constraint firstAttribute="trailing" secondItem="ZlN-wM-dLF" secondAttribute="trailing" id="mBr-no-2Rg"/>
+                            <constraint firstItem="rKo-6l-uh4" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="8" id="ys1-ll-BY1"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="262"/>
                     <connections>
+                        <outlet property="imageView" destination="rKo-6l-uh4" id="KAc-Qh-6Nt"/>
                         <outlet property="mapView" destination="ZlN-wM-dLF" id="hjV-Nh-L7n"/>
                     </connections>
                 </viewController>

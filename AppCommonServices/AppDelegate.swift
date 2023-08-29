@@ -13,22 +13,33 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private let categoryIdentifier = "AcceptOrReject"
     private enum ActionIdentifier: String {
-        case accept, reject
+        case comment
+        case accept
+        case cancel
+        case payment
         var title: String {
             switch self {
+            case .comment:
+                return "Comment"
             case .accept:
                 return "Accept"
-            case .reject:
-                return "Reject"
+            case .cancel:
+                return "Cancel"
+            case .payment:
+                return "Payment"
             }
         }
         
         var icon: UNNotificationActionIcon {
             switch self {
+            case .comment:
+                return .init(systemImageName: "bubble")
             case .accept:
                 return .init(systemImageName: "checkmark")
-            case .reject:
+            case .cancel:
                 return .init(systemImageName: "xmark")
+            case .payment:
+                return .init(systemImageName: "dollarsign.circle.fill")
             }
         }
     }
@@ -83,9 +94,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func registerCustomActions() {
-        let accept = UNNotificationAction(identifier: ActionIdentifier.accept.rawValue, title: ActionIdentifier.accept.title, options: .foreground, icon: ActionIdentifier.accept.icon)
-        let reject = UNNotificationAction(identifier: ActionIdentifier.reject.rawValue, title: ActionIdentifier.reject.title, options: .foreground, icon: ActionIdentifier.reject.icon)
-        let category = UNNotificationCategory(identifier: categoryIdentifier, actions: [accept, reject], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: "AcceptOrReject", categorySummaryFormat: "AOR", options: [.hiddenPreviewsShowTitle])
+        let comment = UNTextInputNotificationAction(identifier: ActionIdentifier.comment.rawValue, title: ActionIdentifier.comment.title, options: .authenticationRequired, icon: ActionIdentifier.comment.icon)
+        let payment = UNNotificationAction(identifier: ActionIdentifier.payment.rawValue, title: ActionIdentifier.payment.title, options: .authenticationRequired, icon: ActionIdentifier.payment.icon)
+        let category = UNNotificationCategory(identifier: categoryIdentifier, actions: [comment, payment], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: "hiddenPreviewsBodyPlaceholder", categorySummaryFormat: "AOR", options: [.hiddenPreviewsShowTitle])
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
 }
@@ -100,12 +111,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let identity = response.notification.request.content.categoryIdentifier
         guard identity == categoryIdentifier, let action = ActionIdentifier(rawValue: response.actionIdentifier) else {
             return
-        }
-        switch action {
-        case .accept:
-            Notification.Name.acceptButton.post()
-        case .reject:
-            Notification.Name.rejectButton.post()
         }
     }
 
