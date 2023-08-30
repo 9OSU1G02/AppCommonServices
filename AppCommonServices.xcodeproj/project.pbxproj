@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		468B479F2A98F2DB00169BE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B479E2A98F2DB00169BE7 /* AppDelegate.swift */; };
 		468B47A12A98F2DB00169BE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B47A02A98F2DB00169BE7 /* SceneDelegate.swift */; };
-		468B47A32A98F2DB00169BE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B47A22A98F2DB00169BE7 /* ViewController.swift */; };
 		468B47A62A98F2DB00169BE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468B47A42A98F2DB00169BE7 /* Main.storyboard */; };
 		468B47A82A98F2DC00169BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 468B47A72A98F2DC00169BE7 /* Assets.xcassets */; };
 		468B47AB2A98F2DC00169BE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468B47A92A98F2DC00169BE7 /* LaunchScreen.storyboard */; };
@@ -27,6 +26,15 @@
 		46CB79642A9CF0BE004E620D /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CB79632A9CF0BE004E620D /* NotificationViewController.swift */; };
 		46CB79672A9CF0BE004E620D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46CB79652A9CF0BE004E620D /* MainInterface.storyboard */; };
 		46CB796B2A9CF0BE004E620D /* CustomNotificationUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 46CB795C2A9CF0BE004E620D /* CustomNotificationUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		46E815D12A9F7F5500BD4E51 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E815CC2A9F7F5400BD4E51 /* SegueHandlerType.swift */; };
+		46E815D22A9F7F5500BD4E51 /* TimeIntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E815CD2A9F7F5400BD4E51 /* TimeIntervalViewController.swift */; };
+		46E815D32A9F7F5500BD4E51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E815CE2A9F7F5400BD4E51 /* ViewController.swift */; };
+		46E815D42A9F7F5500BD4E51 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E815CF2A9F7F5400BD4E51 /* NotificationScheduler.swift */; };
+		46E815D52A9F7F5500BD4E51 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E815D02A9F7F5500BD4E51 /* CalendarViewController.swift */; };
+		46E815DC2A9F7F6300BD4E51 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E815D72A9F7F6300BD4E51 /* LocationViewController.swift */; };
+		46E815DD2A9F7F6300BD4E51 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E815D82A9F7F6300BD4E51 /* LocationDetailsViewController.swift */; };
+		46E815DE2A9F7F6300BD4E51 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E815DA2A9F7F6300BD4E51 /* UITextField+Ext.swift */; };
+		46E815DF2A9F7F6300BD4E51 /* UIAlertController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E815DB2A9F7F6300BD4E51 /* UIAlertController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +73,6 @@
 		468B479B2A98F2DB00169BE7 /* AppCommonServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCommonServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		468B479E2A98F2DB00169BE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		468B47A02A98F2DB00169BE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		468B47A22A98F2DB00169BE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		468B47A52A98F2DB00169BE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		468B47A72A98F2DC00169BE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		468B47AA2A98F2DC00169BE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,6 +93,15 @@
 		46CB79632A9CF0BE004E620D /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		46CB79662A9CF0BE004E620D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		46CB79682A9CF0BE004E620D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46E815CC2A9F7F5400BD4E51 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		46E815CD2A9F7F5400BD4E51 /* TimeIntervalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalViewController.swift; sourceTree = "<group>"; };
+		46E815CE2A9F7F5400BD4E51 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46E815CF2A9F7F5400BD4E51 /* NotificationScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
+		46E815D02A9F7F5500BD4E51 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		46E815D72A9F7F6300BD4E51 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		46E815D82A9F7F6300BD4E51 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
+		46E815DA2A9F7F6300BD4E51 /* UITextField+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
+		46E815DB2A9F7F6300BD4E51 /* UIAlertController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,9 +160,15 @@
 				468B479E2A98F2DB00169BE7 /* AppDelegate.swift */,
 				46B67F252A9A63BF006607A3 /* Notification.swift */,
 				468B47A02A98F2DB00169BE7 /* SceneDelegate.swift */,
-				468B47A22A98F2DB00169BE7 /* ViewController.swift */,
+				46E815D92A9F7F6300BD4E51 /* Extensions */,
+				46E815D62A9F7F6300BD4E51 /* Location */,
 				46CB79552A9CEC57004E620D /* UserDefaults.swift */,
 				46B67F232A9A3AF8006607A3 /* BeachViewController.swift */,
+				46E815D02A9F7F5500BD4E51 /* CalendarViewController.swift */,
+				46E815CF2A9F7F5400BD4E51 /* NotificationScheduler.swift */,
+				46E815CC2A9F7F5400BD4E51 /* SegueHandlerType.swift */,
+				46E815CD2A9F7F5400BD4E51 /* TimeIntervalViewController.swift */,
+				46E815CE2A9F7F5400BD4E51 /* ViewController.swift */,
 				468B47A42A98F2DB00169BE7 /* Main.storyboard */,
 				468B47A72A98F2DC00169BE7 /* Assets.xcassets */,
 				468B47A92A98F2DC00169BE7 /* LaunchScreen.storyboard */,
@@ -184,6 +206,24 @@
 				46CB79682A9CF0BE004E620D /* Info.plist */,
 			);
 			path = CustomNotificationUI;
+			sourceTree = "<group>";
+		};
+		46E815D62A9F7F6300BD4E51 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				46E815D72A9F7F6300BD4E51 /* LocationViewController.swift */,
+				46E815D82A9F7F6300BD4E51 /* LocationDetailsViewController.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		46E815D92A9F7F6300BD4E51 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				46E815DA2A9F7F6300BD4E51 /* UITextField+Ext.swift */,
+				46E815DB2A9F7F6300BD4E51 /* UIAlertController+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,11 +364,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				468B47A32A98F2DB00169BE7 /* ViewController.swift in Sources */,
+				46E815DD2A9F7F6300BD4E51 /* LocationDetailsViewController.swift in Sources */,
+				46E815D52A9F7F5500BD4E51 /* CalendarViewController.swift in Sources */,
+				46E815D22A9F7F5500BD4E51 /* TimeIntervalViewController.swift in Sources */,
 				46B67F262A9A63BF006607A3 /* Notification.swift in Sources */,
 				46CB79562A9CEC57004E620D /* UserDefaults.swift in Sources */,
 				468B479F2A98F2DB00169BE7 /* AppDelegate.swift in Sources */,
+				46E815DE2A9F7F6300BD4E51 /* UITextField+Ext.swift in Sources */,
+				46E815DC2A9F7F6300BD4E51 /* LocationViewController.swift in Sources */,
+				46E815DF2A9F7F6300BD4E51 /* UIAlertController+Ext.swift in Sources */,
+				46E815D42A9F7F5500BD4E51 /* NotificationScheduler.swift in Sources */,
 				46B67F242A9A3AF8006607A3 /* BeachViewController.swift in Sources */,
+				46E815D12A9F7F5500BD4E51 /* SegueHandlerType.swift in Sources */,
+				46E815D32A9F7F5500BD4E51 /* ViewController.swift in Sources */,
 				468B47A12A98F2DB00169BE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +568,7 @@
 				DEVELOPMENT_TEAM = HLB4K7V9AN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppCommonServices/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -550,6 +599,7 @@
 				DEVELOPMENT_TEAM = HLB4K7V9AN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppCommonServices/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

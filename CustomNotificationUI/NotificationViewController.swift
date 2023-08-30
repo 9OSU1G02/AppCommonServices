@@ -15,6 +15,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         case comment
         case accept
         case cancel
+        case payment
         var title: String {
             switch self {
             case .comment:
@@ -23,9 +24,11 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
                 return "Accept"
             case .cancel:
                 return "Cancel"
+            case .payment:
+                return "Payment"
             }
         }
-
+        
         var icon: UNNotificationActionIcon {
             switch self {
             case .comment:
@@ -33,7 +36,9 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
             case .accept:
                 return .init(systemImageName: "checkmark")
             case .cancel:
-                return .init(systemImageName: "bubble")
+                return .init(systemImageName: "xmark")
+            case .payment:
+                return .init(systemImageName: "dollarsign.circle.fill")
             }
         }
     }
@@ -57,6 +62,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     }
     
     override var canBecomeFirstResponder: Bool { return true }
+    
     func didReceive(_ notification: UNNotification) {
         let userInfo = notification.request.content.userInfo
         guard let latitude = userInfo["latitude"] as? CLLocationDistance,
@@ -93,6 +99,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
          
         let accept = ActionIdentifier.accept
         let cancel = ActionIdentifier.cancel
+        let payment = ActionIdentifier.payment
         switch response.actionIdentifier {
         case accept.rawValue:
             let cancelAction = UNTextInputNotificationAction(identifier: cancel.rawValue, title: cancel.title)
@@ -102,12 +109,12 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
             let aceeptAction = UNTextInputNotificationAction(identifier: accept.rawValue, title: accept.title)
             let currentActions = extensionContext?.notificationActions ?? []
             extensionContext?.notificationActions = currentActions.map { $0.identifier == cancel.rawValue ? aceeptAction : $0 }
+        case payment.rawValue:
+            becomeFirstResponder()
         default:
             break
         }
-        becomeFirstResponder()
-        extensionContext?.dismissNotificationContentExtension()
-        //completion(.dismiss)
+        completion(.doNotDismiss)
     }
     
     private lazy var paymentView: PaymentView = {

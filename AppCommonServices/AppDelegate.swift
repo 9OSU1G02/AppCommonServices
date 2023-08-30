@@ -11,7 +11,7 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    private let categoryIdentifier = "AcceptOrReject"
+    private let categoryIdentifier = "ShowMap"
     private enum ActionIdentifier: String {
         case comment
         case accept

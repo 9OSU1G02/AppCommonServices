@@ -8,7 +8,7 @@
 import Foundation
 extension UserDefaults {
     // 1
-    static let suiteName = "group.com.raywenderlich.PushNotifications"
+    static let suiteName = "group.gosu1902.AppCommonServices"
     static let extensions = UserDefaults(suiteName: suiteName)!
 
     // 2
