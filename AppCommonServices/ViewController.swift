@@ -59,7 +59,7 @@ final class ViewController: UITableViewController, SegueHandlerType {
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-
+      DynamicLinkFactory.createDynamicLink()
     center.requestAuthorization(
       options: [.alert,.sound,.badge],
       completionHandler: { [weak self] (granted, error) in

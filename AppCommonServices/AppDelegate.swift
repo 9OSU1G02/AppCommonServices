@@ -8,7 +8,7 @@
 import FirebaseCore
 import FirebaseMessaging
 import UIKit
-
+import FirebaseDynamicLinks
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private let categoryIdentifier = "ShowMap"
@@ -112,14 +112,15 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         guard identity == categoryIdentifier, let action = ActionIdentifier(rawValue: response.actionIdentifier) else {
             return
         }
+        print("categoryIdentifier", categoryIdentifier, "action", action)
     }
-
+    
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         guard let text = userInfo["text"] as? String, let image = userInfo["image"] as? String, let url = URL(string: image) else {
             completionHandler(.noData)
             return
         }
-        print("url", url)
+        print("url", url, "text", text)
     }
 }
 
