@@ -9,6 +9,8 @@ import FirebaseCore
 import FirebaseMessaging
 import UIKit
 import FirebaseDynamicLinks
+import GoogleMobileAds
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private let categoryIdentifier = "ShowMap"
@@ -56,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registerCustomActions()
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
+        GADMobileAds.sharedInstance().start()
         return true
     }
 

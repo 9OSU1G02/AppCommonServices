@@ -7,10 +7,11 @@
 
 import UIKit
 import FirebaseDynamicLinks
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+import GoogleMobileAds
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, GADFullScreenContentDelegate {
 
     var window: UIWindow?
-
+    var appOpenAd: GADAppOpenAd?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -27,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
+        tryToPresentAd()
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
     }
@@ -46,5 +48,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+    
+    func requestAppOpenAd() {
+        let request = GADRequest()
+        GADAppOpenAd.load(withAdUnitID: "ca-app-pub-3940256099942544/5662855259",
+                          request: request,
+                          orientation: UIInterfaceOrientation.portrait,
+                          completionHandler: { (appOpenAdIn, _) in
+                            self.appOpenAd = appOpenAdIn
+                            self.appOpenAd?.fullScreenContentDelegate = self
+                            print("Ad is ready")
+                          
+                          })
+        
+    }
+
+    func tryToPresentAd() {
+        if let gOpenAd = self.appOpenAd, let rwc = UIApplication.shared.windows.last?.rootViewController {
+            gOpenAd.present(fromRootViewController: rwc)
+        } else {
+            self.requestAppOpenAd()
+        }
+    }
+
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        requestAppOpenAd()
+    }
+
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        requestAppOpenAd()
+    }
+    
 }
 
