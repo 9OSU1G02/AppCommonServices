@@ -1,0 +1,188 @@
+{
+  "identifier" : "47827E16",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6464452043",
+      "localizations" : [
+        {
+          "description" : "A happy and carefree owl",
+          "displayName" : "Carefree Owl",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "gosu1902.AppCommonServices.CarefreeOwl",
+      "referenceName" : "Carefree Owl",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6464452550",
+      "localizations" : [
+        {
+          "description" : "A very sad owl",
+          "displayName" : "Crying Owl",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "gosu1902.AppCommonServices.CryingOwl",
+      "referenceName" : "Crying Owl",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6464452663",
+      "localizations" : [
+        {
+          "description" : "An owl that's done a great job",
+          "displayName" : "Good Job Owl",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "gosu1902.AppCommonServices.GoodJobOwl",
+      "referenceName" : "Good Job Owl",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6464452531",
+      "localizations" : [
+        {
+          "description" : "A Very sleepy owl",
+          "displayName" : "Good Night Owl",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "gosu1902.AppCommonServices.GoodNightOwl",
+      "referenceName" : "Good Night Owl",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6464452789",
+      "localizations" : [
+        {
+          "description" : "An owl deeply in love",
+          "displayName" : "In Love Owl",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "gosu1902.AppCommonServices.InLoveOwl",
+      "referenceName" : "In Love Owl",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6464452794",
+      "localizations" : [
+        {
+          "description" : "A very sad and lonely owl",
+          "displayName" : "Lonely Owl",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "gosu1902.AppCommonServices.LonelyOwl",
+      "referenceName" : "Lonely Owl",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "6464452918",
+      "localizations" : [
+        {
+          "description" : "This owl likes to stay up late",
+          "displayName" : "Night Owl",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "gosu1902.AppCommonServices.NightOwl",
+      "referenceName" : "Night Owl",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "6464452425",
+      "localizations" : [
+        {
+          "description" : "A random owl from the collection",
+          "displayName" : "Random Owl",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "gosu1902.AppCommonServices.RandomOwls",
+      "referenceName" : "Random Owl",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "3.99",
+      "familyShareable" : false,
+      "internalID" : "6464453076",
+      "localizations" : [
+        {
+          "description" : "A shy but friendly owl",
+          "displayName" : "Shy Owl",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "gosu1902.AppCommonServices.ShyOwl",
+      "referenceName" : "Shy Owl",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6463804814",
+    "_developerTeamID" : "HLB4K7V9AN",
+    "_lastSynchronizedDate" : 715770398.75948203
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21385836",
+      "localizations" : [
+
+      ],
+      "name" : "Gold Owl Plan",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "9.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6464589976",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Owls received on a monthly basis",
+              "displayName" : "Monthly Owls",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "gosu1902.AppCommonServices.MonthlyOwls",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Monthly Owls",
+          "subscriptionGroupID" : "21385836",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

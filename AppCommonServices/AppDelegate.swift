@@ -6,14 +6,19 @@
 //
 
 import FirebaseCore
-import FirebaseMessaging
-import UIKit
 import FirebaseDynamicLinks
+import FirebaseMessaging
 import GoogleMobileAds
+import StoreKit
+import SwiftKeychainWrapper
+import TPInAppReceipt
+import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private let categoryIdentifier = "ShowMap"
+    var store: IAPStore!
+    var receipt: InAppReceipt?
     private enum ActionIdentifier: String {
         case comment
         case accept
@@ -31,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return "Payment"
             }
         }
-        
+
         var icon: UNNotificationActionIcon {
             switch self {
             case .comment:
@@ -59,6 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         GADMobileAds.sharedInstance().start()
+        SKPaymentQueue.default().add(self)
+        receipt = try? InAppReceipt()
         return true
     }
 
@@ -117,7 +124,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
         print("categoryIdentifier", categoryIdentifier, "action", action)
     }
-    
+
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         guard let text = userInfo["text"] as? String, let image = userInfo["image"] as? String, let url = URL(string: image) else {
             completionHandler(.noData)
@@ -130,5 +137,47 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 extension AppDelegate: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         print("fcmToken", fcmToken ?? "")
+    }
+}
+
+extension AppDelegate: SKPaymentTransactionObserver {
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            switch transaction.transactionState {
+            case .purchased, .restored:
+                completeTransaction(transaction)
+            case .failed:
+                failedTransaction(transaction)
+            case .purchasing:
+                print("parchase being process")
+            case .deferred:
+                print("pending external action")
+            @unknown default:
+                print("unhandled transaction state")
+            }
+        }
+    }
+
+    private func completeTransaction(_ transaction: SKPaymentTransaction) {
+        SKPaymentQueue.default().finishTransaction(transaction)
+        if receipt?.isValid ?? false {
+            deliverPurchaseNotification(for: transaction.payment.productIdentifier)
+        }
+    }
+
+    private func failedTransaction(_ transaction: SKPaymentTransaction) {
+        if let transactionError = transaction.error as? NSError, transactionError.code != SKError.paymentCancelled.rawValue {
+            print("transaction error: \(transactionError.localizedDescription)")
+        }
+        SKPaymentQueue.default().finishTransaction(transaction)
+    }
+
+    private func deliverPurchaseNotification(for identifier: String?) {
+        guard let identifier else { return }
+        if OwlProducts.isConsumable(productIdentifier: identifier) {
+            store.addConsumable(productIdentifier: identifier, amount: 3)
+        } else {
+            store?.addPurchase(purchaseIdentifier: identifier)
+        }
     }
 }
