@@ -31,6 +31,10 @@
 		468B47A82A98F2DC00169BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 468B47A72A98F2DC00169BE7 /* Assets.xcassets */; };
 		468B47AB2A98F2DC00169BE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468B47A92A98F2DC00169BE7 /* LaunchScreen.storyboard */; };
 		46961CA32AA98B660054B8F2 /* TPInAppReceipt in Frameworks */ = {isa = PBXBuildFile; productRef = 46961CA22AA98B660054B8F2 /* TPInAppReceipt */; };
+		46961CA52AA9E42A0054B8F2 /* IAPStoreV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46961CA42AA9E42A0054B8F2 /* IAPStoreV2.swift */; };
+		46961CA72AA9EC8D0054B8F2 /* ContentViewV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46961CA62AA9EC8D0054B8F2 /* ContentViewV2.swift */; };
+		46961CA92AA9ED660054B8F2 /* OwlDLCViewV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46961CA82AA9ED660054B8F2 /* OwlDLCViewV2.swift */; };
+		46961CAB2AA9EF6A0054B8F2 /* ContentViewControllerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46961CAA2AA9EF6A0054B8F2 /* ContentViewControllerV2.swift */; };
 		46A551532AA8305800764286 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A551522AA8305800764286 /* StoreKit.framework */; };
 		46A551592AA8331700764286 /* OwlDLCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A551582AA8331700764286 /* OwlDLCView.swift */; };
 		46A5515B2AA8334000764286 /* Owl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A5515A2AA8334000764286 /* Owl.swift */; };
@@ -134,6 +138,10 @@
 		468B47AA2A98F2DC00169BE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		468B47AC2A98F2DC00169BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		468B47B22A98F2E700169BE7 /* AppCommonServices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCommonServices.entitlements; sourceTree = "<group>"; };
+		46961CA42AA9E42A0054B8F2 /* IAPStoreV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPStoreV2.swift; sourceTree = "<group>"; };
+		46961CA62AA9EC8D0054B8F2 /* ContentViewV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewV2.swift; sourceTree = "<group>"; };
+		46961CA82AA9ED660054B8F2 /* OwlDLCViewV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwlDLCViewV2.swift; sourceTree = "<group>"; };
+		46961CAA2AA9EF6A0054B8F2 /* ContentViewControllerV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewControllerV2.swift; sourceTree = "<group>"; };
 		46A551522AA8305800764286 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		46A551582AA8331700764286 /* OwlDLCView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwlDLCView.swift; sourceTree = "<group>"; };
 		46A5515A2AA8334000764286 /* Owl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owl.swift; sourceTree = "<group>"; };
@@ -298,6 +306,7 @@
 			children = (
 				46A551612AA8394900764286 /* OwlProducts.swift */,
 				46A551632AA83AC100764286 /* IAPStore.swift */,
+				46961CA42AA9E42A0054B8F2 /* IAPStoreV2.swift */,
 				46A5515A2AA8334000764286 /* Owl.swift */,
 				46F79FDD2AA8B23B00303A68 /* Configuration.storekit */,
 			);
@@ -308,7 +317,9 @@
 			isa = PBXGroup;
 			children = (
 				46A5515F2AA8386400764286 /* ContentView.swift */,
+				46961CA62AA9EC8D0054B8F2 /* ContentViewV2.swift */,
 				46A551582AA8331700764286 /* OwlDLCView.swift */,
+				46961CA82AA9ED660054B8F2 /* OwlDLCViewV2.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -317,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				46A5515D2AA8383900764286 /* ContentViewController.swift */,
+				46961CAA2AA9EF6A0054B8F2 /* ContentViewControllerV2.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -616,20 +628,24 @@
 				468B479F2A98F2DB00169BE7 /* AppDelegate.swift in Sources */,
 				46E815DE2A9F7F6300BD4E51 /* UITextField+Ext.swift in Sources */,
 				46E815DC2A9F7F6300BD4E51 /* LocationViewController.swift in Sources */,
+				46961CA52AA9E42A0054B8F2 /* IAPStoreV2.swift in Sources */,
 				46E815DF2A9F7F6300BD4E51 /* UIAlertController+Ext.swift in Sources */,
 				46E815D42A9F7F5500BD4E51 /* NotificationScheduler.swift in Sources */,
 				4664C2C52AA0C0AF0053A7CD /* DynamicLink.swift in Sources */,
 				46A551602AA8386400764286 /* ContentView.swift in Sources */,
 				46A551622AA8394900764286 /* OwlProducts.swift in Sources */,
 				46B67F242A9A3AF8006607A3 /* BeachViewController.swift in Sources */,
+				46961CA92AA9ED660054B8F2 /* OwlDLCViewV2.swift in Sources */,
 				46A5515E2AA8383900764286 /* ContentViewController.swift in Sources */,
 				46A551642AA83AC100764286 /* IAPStore.swift in Sources */,
+				46961CA72AA9EC8D0054B8F2 /* ContentViewV2.swift in Sources */,
 				46E815D12A9F7F5500BD4E51 /* SegueHandlerType.swift in Sources */,
 				46A551592AA8331700764286 /* OwlDLCView.swift in Sources */,
 				4664C2C72AA0CAE30053A7CD /* Firestore.swift in Sources */,
 				B6F49D752AA4F1FF000DA6BE /* GADViewController.swift in Sources */,
 				46E815D32A9F7F5500BD4E51 /* ViewController.swift in Sources */,
 				46A5515B2AA8334000764286 /* Owl.swift in Sources */,
+				46961CAB2AA9EF6A0054B8F2 /* ContentViewControllerV2.swift in Sources */,
 				468B47A12A98F2DB00169BE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

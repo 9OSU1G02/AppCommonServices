@@ -6,7 +6,6 @@
 //
 
 import StoreKit
-import UIKit
 import SwiftKeychainWrapper
 class IAPStore: NSObject, ObservableObject {
     private var productsRequest: SKProductsRequest?
