@@ -13,6 +13,7 @@ import StoreKit
 import SwiftKeychainWrapper
 import TPInAppReceipt
 import UIKit
+import RevenueCat
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -64,11 +65,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         GADMobileAds.sharedInstance().start()
-        SKPaymentQueue.default().add(self)
         receipt = try? InAppReceipt()
+        //SKPaymentQueue.default().add(self) disable storekit 1
+        setupRevenuaCat()
         return true
     }
-
+    
+    private func setupRevenuaCat() {
+        Purchases.logLevel = .debug
+        Purchases.configure(withAPIKey: "appl_ukkZcWuRAjjnlfIAfzkXqMsGbyv")
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

@@ -42,7 +42,10 @@ public enum OwlProducts {
     ]
 
     static let productIDsConsumables: Set<String> = ["gosu1902.AppCommonServices.RandomOwls"]
-
+    static let productIDsSubscription: Set<String> = ["gosu1902.AppCommonServices.MonthlyOwls"]
+    static let allProducts: Set<String> = {
+        productIDsConsumables.union(productIDsNonConsumables).union(productIDsSubscription)
+    }()
     static func fetchRandomUnownedProduct(ownedProducts: Set<String>) -> String {
         let unownedProducts = productIDsNonConsumables.subtracting(ownedProducts)
         return unownedProducts.randomElement() ?? ""

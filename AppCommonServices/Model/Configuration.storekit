@@ -181,6 +181,10 @@
       ]
     }
   ],
+  "subscriptionOffersKeyPair" : {
+    "id" : "F19C8522",
+    "privateKey" : "MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQg0xWSWdCfzDlPERGdQdz5P2LvJs8hPi9b7y5W88qIHE+gCgYIKoZIzj0DAQehRANCAAQN5sscKHiV0WbIKQJF8xdbc6p6deSzPN/kh11DDnacXGBcHBhNaU6k9jbW23+rM8sOIESpdYsKZSmfNb0F7xb1"
+  },
   "version" : {
     "major" : 2,
     "minor" : 0

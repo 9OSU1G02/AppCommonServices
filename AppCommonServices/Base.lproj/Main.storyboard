@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tK0-NK-PaA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ChE-69-TVd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -729,6 +729,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nf3-v2-GOu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-563" y="-745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V43-ky-GkT">
+            <objects>
+                <viewController id="ChE-69-TVd" customClass="RCViewController" customModule="AppCommonServices" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="whq-AE-HXZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="XYP-7g-cbs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W8R-xi-yQF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Uva-Jg-JBl">
+                                <rect key="frame" x="16" y="59" width="361" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iB-38-oyf">
+                                <rect key="frame" x="117.66666666666669" y="409" width="158" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Restore Purchase"/>
+                                <connections>
+                                    <action selector="onTapRestorePurchase:" destination="ChE-69-TVd" eventType="touchUpInside" id="TG8-Ch-IBl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HsL-kg-U6o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XYP-7g-cbs" firstAttribute="top" secondItem="Uva-Jg-JBl" secondAttribute="bottom" id="5EM-lg-cYe"/>
+                            <constraint firstItem="Uva-Jg-JBl" firstAttribute="top" secondItem="whq-AE-HXZ" secondAttribute="bottom" id="IKa-wN-7JH"/>
+                            <constraint firstItem="2iB-38-oyf" firstAttribute="centerY" secondItem="W8R-xi-yQF" secondAttribute="centerY" id="KmI-SZ-qTy"/>
+                            <constraint firstItem="Uva-Jg-JBl" firstAttribute="leading" secondItem="W8R-xi-yQF" secondAttribute="leadingMargin" id="XJd-SE-xL6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uva-Jg-JBl" secondAttribute="trailing" id="d3S-uo-EoY"/>
+                            <constraint firstItem="2iB-38-oyf" firstAttribute="centerX" secondItem="W8R-xi-yQF" secondAttribute="centerX" id="vMX-WA-epK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="productTableView" destination="Uva-Jg-JBl" id="i3s-dy-bw9"/>
+                        <outlet property="restorePurchase" destination="2iB-38-oyf" id="4sW-gu-ULp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NeG-LG-bZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="300"/>
         </scene>
     </scenes>
     <resources>
