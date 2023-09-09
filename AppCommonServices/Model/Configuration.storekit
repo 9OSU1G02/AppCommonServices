@@ -1,7 +1,21 @@
 {
   "identifier" : "47827E16",
   "nonRenewingSubscriptions" : [
-
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "6464593727",
+      "localizations" : [
+        {
+          "description" : "Random owls for 3 months",
+          "displayName" : "3 Months of Random",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "gosu1902.AppCommonServices.3MonthsOfRandom",
+      "referenceName" : "3 Months of Random",
+      "type" : "NonRenewingSubscription"
+    }
   ],
   "products" : [
     {
@@ -142,8 +156,12 @@
   ],
   "settings" : {
     "_applicationInternalID" : "6463804814",
+    "_compatibilityTimeRate" : {
+      "3" : 6
+    },
     "_developerTeamID" : "HLB4K7V9AN",
-    "_lastSynchronizedDate" : 715770398.75948203
+    "_lastSynchronizedDate" : 715970651.09300601,
+    "_timeRate" : 1004
   },
   "subscriptionGroups" : [
     {
@@ -155,16 +173,41 @@
       "subscriptions" : [
         {
           "adHocOffers" : [
-
+            {
+              "internalID" : "D009245B",
+              "numberOfPeriods" : 1,
+              "offerID" : "OfferID",
+              "paymentMode" : "free",
+              "referenceName" : "Offer",
+              "subscriptionPeriod" : "P2W"
+            }
           ],
           "codeOffers" : [
-
+            {
+              "eligibility" : [
+                "expired",
+                "new",
+                "existing"
+              ],
+              "internalID" : "DBB0F291",
+              "isStackable" : true,
+              "numberOfPeriods" : 1,
+              "paymentMode" : "free",
+              "referenceName" : "Offer Code",
+              "subscriptionPeriod" : "P3D"
+            }
           ],
           "displayPrice" : "9.99",
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "6464589976",
-          "introductoryOffer" : null,
+          "introductoryOffer" : {
+            "displayPrice" : "1.99",
+            "internalID" : "94E1338B",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "payUpFront",
+            "subscriptionPeriod" : "P3M"
+          },
           "localizations" : [
             {
               "description" : "Owls received on a monthly basis",
