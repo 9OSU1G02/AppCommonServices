@@ -72,9 +72,6 @@
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
-      <StoreKitConfigurationFileReference
-         identifier = "../../AppCommonServices/Model/Configuration.storekit">
-      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

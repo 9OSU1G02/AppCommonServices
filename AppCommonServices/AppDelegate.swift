@@ -73,7 +73,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupRevenuaCat() {
         Purchases.logLevel = .debug
-        Purchases.configure(withAPIKey: "appl_ukkZcWuRAjjnlfIAfzkXqMsGbyv")
+        let apiKey = Bundle.main.object(forInfoDictionaryKey: "RC_API") as! String
+        Purchases.configure(withAPIKey: apiKey)
     }
     
     // MARK: UISceneSession Lifecycle

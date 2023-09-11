@@ -137,6 +137,9 @@
 		4664C2E12AA0D9570053A7CD /* cat.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.JPG; sourceTree = "<group>"; };
 		4664C2E32AA0EB220053A7CD /* remote_config_defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = remote_config_defaults.plist; sourceTree = "<group>"; };
 		4664C2E52AA0EB3C0053A7CD /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
+		46747A822AAF4C5200B2A22F /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
+		46747A832AAF5D1100B2A22F /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
+		46747A842AAF636800B2A22F /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		468B479B2A98F2DB00169BE7 /* AppCommonServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCommonServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		468B479E2A98F2DB00169BE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		468B47A02A98F2DB00169BE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +254,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46747A812AAF4C3D00B2A22F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				46747A822AAF4C5200B2A22F /* Dev.xcconfig */,
+				46747A832AAF5D1100B2A22F /* Alpha.xcconfig */,
+				46747A842AAF636800B2A22F /* Secrets.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		468B47922A98F2DB00169BE7 = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +290,7 @@
 		468B479D2A98F2DB00169BE7 /* AppCommonServices */ = {
 			isa = PBXGroup;
 			children = (
+				46747A812AAF4C3D00B2A22F /* Configuration */,
 				46A5515C2AA837C600764286 /* ViewControllers */,
 				46A551572AA8328500764286 /* Views */,
 				46A551542AA8326F00764286 /* Model */,
@@ -740,10 +754,187 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		468B47AD2A98F2DC00169BE7 /* Debug */ = {
+		46747A7B2AAF3E3600B2A22F /* Alpha */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46747A842AAF636800B2A22F /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Alpha;
+		};
+		46747A7C2AAF3E3600B2A22F /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46747A832AAF5D1100B2A22F /* Alpha.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(inherited)";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppCommonServices/AppCommonServices.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = HLB4K7V9AN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppCommonServices/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "App Common Services";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need your location";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Alpha;
+		};
+		46747A7D2AAF3E3600B2A22F /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PayloadModification/PayloadModification.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLB4K7V9AN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PayloadModification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PayloadModification;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices.alpha.PayloadModification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Alpha;
+		};
+		46747A7E2AAF3E3600B2A22F /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLB4K7V9AN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CustomNotificationUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CustomNotificationUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices.alpha.CustomNotificationUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Alpha;
+		};
+		46747A7F2AAF3E3600B2A22F /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = HLB4K7V9AN;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = HLB4K7V9AN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServicesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppCommonServices.app/AppCommonServices";
+			};
+			name = Alpha;
+		};
+		468B47AD2A98F2DC00169BE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46747A842AAF636800B2A22F /* Secrets.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -794,6 +985,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -802,8 +994,10 @@
 		};
 		468B47AE2A98F2DC00169BE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46747A842AAF636800B2A22F /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -847,6 +1041,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -856,9 +1051,10 @@
 		};
 		468B47B02A98F2DC00169BE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46747A822AAF4C5200B2A22F /* Dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(inherited)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AppCommonServices/AppCommonServices.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -882,7 +1078,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
@@ -955,7 +1151,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices.PayloadModification;
+				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices.dev.PayloadModification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
@@ -1016,7 +1212,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices.CustomNotificationUI;
+				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices.dev.CustomNotificationUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
@@ -1115,6 +1311,7 @@
 			buildConfigurations = (
 				468B47AD2A98F2DC00169BE7 /* Debug */,
 				468B47AE2A98F2DC00169BE7 /* Release */,
+				46747A7B2AAF3E3600B2A22F /* Alpha */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1124,6 +1321,7 @@
 			buildConfigurations = (
 				468B47B02A98F2DC00169BE7 /* Debug */,
 				468B47B12A98F2DC00169BE7 /* Release */,
+				46747A7C2AAF3E3600B2A22F /* Alpha */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1133,6 +1331,7 @@
 			buildConfigurations = (
 				46CB79502A9CDC81004E620D /* Debug */,
 				46CB79512A9CDC81004E620D /* Release */,
+				46747A7D2AAF3E3600B2A22F /* Alpha */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1142,6 +1341,7 @@
 			buildConfigurations = (
 				46CB796D2A9CF0BE004E620D /* Debug */,
 				46CB796E2A9CF0BE004E620D /* Release */,
+				46747A7E2AAF3E3600B2A22F /* Alpha */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1151,6 +1351,7 @@
 			buildConfigurations = (
 				46F79FF22AA8D27800303A68 /* Debug */,
 				46F79FF32AA8D27800303A68 /* Release */,
+				46747A7F2AAF3E3600B2A22F /* Alpha */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

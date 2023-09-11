@@ -17,6 +17,8 @@
 	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-4449566760456163~2922053170</string>
+	<key>RC_API</key>
+	<string>$(RC_API)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

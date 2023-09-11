@@ -1,0 +1,14 @@
+//
+//  Alpha.xcconfig
+//  AppCommonServices
+//
+//  Created by 9OSU1G02 on 9/11/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// #inclue "./Secrets.xcconfig" (use this when can't using project config level)
+PRODUCT_BUNDLE_IDENTIFIER = $(inherited).alpha
+ASSETCATALOG_COMPILER_APPICON_NAME = $(inherited).alpha
+INFOPLIST_KEY_CFBundleDisplayName = App Common Services Alpha
