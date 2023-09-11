@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4617BAD12AAB6B180011E741 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4617BAD02AAB6B180011E741 /* StoreKitTestCertificate.cer */; };
 		464EA2032AA822290059B338 /* UnifiedNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 464EA2022AA822290059B338 /* UnifiedNativeAdView.xib */; };
 		464EA2062AA822D30059B338 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 464EA2052AA822D30059B338 /* FirebaseAnalytics */; };
 		464EA2082AA822D30059B338 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 464EA2072AA822D30059B338 /* FirebaseAnalyticsSwift */; };
@@ -129,7 +128,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4617BAD02AAB6B180011E741 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; name = StoreKitTestCertificate.cer; path = ../../../StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 		464EA2022AA822290059B338 /* UnifiedNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnifiedNativeAdView.xib; sourceTree = "<group>"; };
 		466433192AAB55FF008B1453 /* RCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCViewController.swift; sourceTree = "<group>"; };
 		4664331B2AAB5A7E008B1453 /* RCProductCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCProductCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -322,7 +320,6 @@
 				46961CA42AA9E42A0054B8F2 /* IAPStoreV2.swift */,
 				46A5515A2AA8334000764286 /* Owl.swift */,
 				46F79FDD2AA8B23B00303A68 /* Configuration.storekit */,
-				4617BAD02AAB6B180011E741 /* StoreKitTestCertificate.cer */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -573,7 +570,6 @@
 				468B47AB2A98F2DC00169BE7 /* LaunchScreen.storyboard in Resources */,
 				4664331E2AAB5A7E008B1453 /* RCProductCellTableViewCell.xib in Resources */,
 				464EA2032AA822290059B338 /* UnifiedNativeAdView.xib in Resources */,
-				4617BAD12AAB6B180011E741 /* StoreKitTestCertificate.cer in Resources */,
 				46B67F1C2A9A29E2006607A3 /* GoogleService-Info.plist in Resources */,
 				4664C2E42AA0EB220053A7CD /* remote_config_defaults.plist in Resources */,
 				468B47A82A98F2DC00169BE7 /* Assets.xcassets in Resources */,
@@ -865,9 +861,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AppCommonServices/AppCommonServices.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = HLB4K7V9AN;
@@ -888,7 +885,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "AppCommonServices Provisioning Profile";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -905,9 +902,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AppCommonServices/AppCommonServices.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = HLB4K7V9AN;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -927,7 +925,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "AppCommonServices Provisioning Profile";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "AppCommonServices Ad Hoc PP";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -941,8 +939,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PayloadModification/PayloadModification.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = HLB4K7V9AN;
@@ -959,7 +958,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices.PayloadModification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "AppCommonServices Payload Provisioning Profile";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -971,7 +970,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PayloadModification/PayloadModification.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -989,7 +989,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices.PayloadModification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "AppCommonServices Payload Provisioning Profile";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "PayloadModification Ad hoc PP";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1001,8 +1001,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = HLB4K7V9AN;
@@ -1019,7 +1019,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices.CustomNotificationUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "AppCommonServices CustomNotificationUI Provisionin";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1030,8 +1030,8 @@
 		46CB796E2A9CF0BE004E620D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -1049,7 +1049,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gosu1902.AppCommonServices.CustomNotificationUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "AppCommonServices CustomNotificationUI Provisionin";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "CustomNotificationUI Ad hoc PP";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
