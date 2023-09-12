@@ -156,12 +156,9 @@
   ],
   "settings" : {
     "_applicationInternalID" : "6463804814",
-    "_compatibilityTimeRate" : {
-      "3" : 6
-    },
     "_developerTeamID" : "HLB4K7V9AN",
     "_lastSynchronizedDate" : 715970651.09300601,
-    "_timeRate" : 1004
+    "_timeRate" : 0
   },
   "subscriptionGroups" : [
     {
@@ -186,8 +183,8 @@
             {
               "eligibility" : [
                 "expired",
-                "new",
-                "existing"
+                "existing",
+                "new"
               ],
               "internalID" : "DBB0F291",
               "isStackable" : true,
