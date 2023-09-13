@@ -8,10 +8,10 @@
 		<dict>
 			<key>UNNotificationExtensionCategory</key>
 			<string>ShowMap</string>
-			<key>UNNotificationExtensionInitialContentSizeRatio</key>
-			<real>0.8</real>
 			<key>UNNotificationExtensionDefaultContentHidden</key>
 			<true/>
+			<key>UNNotificationExtensionInitialContentSizeRatio</key>
+			<real>0.80000000000000004</real>
 			<key>UNNotificationExtensionUserInteractionEnabled</key>
 			<true/>
 		</dict>

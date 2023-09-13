@@ -157,7 +157,7 @@
   "settings" : {
     "_applicationInternalID" : "6463804814",
     "_developerTeamID" : "HLB4K7V9AN",
-    "_lastSynchronizedDate" : 715970651.09300601,
+    "_lastSynchronizedDate" : 716211964.18813503,
     "_timeRate" : 0
   },
   "subscriptionGroups" : [
@@ -171,7 +171,7 @@
         {
           "adHocOffers" : [
             {
-              "internalID" : "D009245B",
+              "internalID" : "EE66FA4D",
               "numberOfPeriods" : 1,
               "offerID" : "OfferID",
               "paymentMode" : "free",
@@ -186,7 +186,7 @@
                 "existing",
                 "new"
               ],
-              "internalID" : "DBB0F291",
+              "internalID" : "0C644713",
               "isStackable" : true,
               "numberOfPeriods" : 1,
               "paymentMode" : "free",
@@ -198,13 +198,7 @@
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "6464589976",
-          "introductoryOffer" : {
-            "displayPrice" : "1.99",
-            "internalID" : "94E1338B",
-            "numberOfPeriods" : 1,
-            "paymentMode" : "payUpFront",
-            "subscriptionPeriod" : "P3M"
-          },
+          "introductoryOffer" : null,
           "localizations" : [
             {
               "description" : "Owls received on a monthly basis",

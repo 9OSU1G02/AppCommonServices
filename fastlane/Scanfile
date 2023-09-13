@@ -1,0 +1,3 @@
+scheme("AppCommonServices")
+device("iPhone 14 Pro Max")
+skip_build(true)
